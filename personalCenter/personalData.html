@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, " />
+		<title>无标题文档</title>
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+	</head>
+
+	<body class="gray_bg">
+		<!--头部-->
+		<div class="page_header marg_bot10">
+			<div class="back_bnt">
+				<a href="../center.html" class="iconfont">&#xe605;</a>
+			</div>
+			<div class="page_title">个人资料</div>
+			<div class="page_function"></div>
+		</div>
+
+		<!--个人资料-->
+		<div class="per_settting_w">
+			<ul>
+
+				<li>
+					<dl class="choose_w">
+						<dt class="fl">真实姓名</dt>
+						<dd class="fr font_color6"><p id="UserName"></p></dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="text_w">
+						<dt class="fl">用户名</dt>
+						<dd class="fr font_color9" id="LoginName"></dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="choose_w">
+						<dt class="fl">电子邮箱 </dt>
+						<dd class="fr font_color6" id="Email"></dd>
+					</dl>
+				</li>
+				<li class="nob_b">
+					<dl class="choose_w">
+						<dt class="fl">手机号码</dt>
+						<dd class="fr font_color6" id="Mobile"></dd>
+					</dl>
+				</li>
+
+			</ul>
+		</div>
+
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/app.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui("#UserName").innerHTML = app.getState().UserName;
+			mui("#LoginName").innerText = app.getState().LoginName;
+			mui("#Email").innerText = app.getState().Email;
+			mui("#Mobile").innerText = app.getState().Mobile;
+		</script>
+	</body>
+
+</html>

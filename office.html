@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, " />
+		<title>无标题文档</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	</head>
+
+	<body class="gray_bg">
+		<div class="index_header ">
+			<dl class="synergy_header">
+				<dt>  <img src="images/tou_img_03.png" /></dt>
+				<dd>
+					<p>欢迎您，</p>
+					<p>湘潭云飞电子商务有限公司 张三</p>
+				</dd>
+			</dl>
+		</div>
+
+		<!--消息-->
+		<div class="synergy_meagess white_bg border-bot marg_bot10">
+			<dt class="iconfont">&#xe616;</dt>
+			<dd>
+				<a href="#">平台将于3月5日下午6点至7点进行更新，给您带不便...</a>
+			</dd>
+		</div>
+
+		<!--分类菜单-->
+		<div class="class_list marg_bot50">
+			<dl>
+				<dt><a href="#" class="mo">
+            <p>项目申请</p><span class="iconfont"> &#xe60b; </span></a></dt>
+				<dd>
+					<a href="#">
+						<p><i class="iconfont font_golden">&#xe610;</i>项目申请</p><span class="iconfont">&#xe61f;</span></a>
+					<a href="#" class="nob">
+						<p><i class="iconfont font_golden">&#xe610;</i>我的申请</p><span class="iconfont">&#xe61f;</span></a>
+				</dd>
+				<dt><a href="#">
+            <p>项目管理</p><span class="iconfont"> &#xe607; </span></a></dt>
+				<dt><a href="#">
+         <p>工作审批单</p>
+         <span class="iconfont"> &#xe607; </span></a></dt>
+				<dt><a href="#">
+          <p>流程设置</p>
+          <span class="iconfont"> &#xe607; </span></a></dt>
+				<dt><a href="#">
+           <p>工作任务</p>
+           <span class="iconfont"> &#xe607; </span></a></dt>
+			</dl>
+
+		</div>
+
+		<!--底部导航-->
+		<div class="footer_menu">
+			<ul>
+				<li>
+					<a href="#"><dt><p class="iconfont">&#xe689;</p></dt>
+						<dd>协同办公</dd>
+					</a>
+				</li>
+				<li>
+					<a href="#"><dt><p class="iconfont">&#xe602;</p></dt>
+						<dd>应用平台</dd>
+					</a>
+				</li>
+				<li>
+					<a href="center.html"><dt><p class="iconfont">&#xe603;</p></dt>
+						<dd>个人中心</dd>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="http://ajax.microsoft.com/ajax/jquery/jquery-3.1.1.min.js"></script>
+		<script>
+			//3个div的统一class = 'div'
+			var index = 0;
+			//3秒轮播一次
+			var timer = setInterval(function() {
+				index = (index == 3) ? 0 : index + 1;
+				//某个div显示，其他的隐藏
+				$(".slideShow li").hide().eq(index).show();
+			}, 3000);
+		</script>
+	</body>
+
+</html>

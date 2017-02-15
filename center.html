@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, " />
+		<title>无标题文档</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+	</head>
+
+	<body class="gray_bg">
+		<!--头部-->
+		<div class="page_header marg_bot10">
+			<div class="page_title">个人中心</div>
+			<div class="page_function"></div>
+		</div>
+		<!--个人资料-->
+		<div class="header_img">
+			<div class="headerimg_l">				
+				<dd>
+					<p>欢迎你</p>
+					<p class="font_golden" id="UserName">湘潭云飞电子商务有限公司 王小贱</p>
+				</dd>
+			</div>
+		</div>
+
+		<div class="personal_class">
+			<ul class="per_list">
+				<li>
+					<a href="personalCenter/personalData.html"><dt class="iconfont col_bg1">&#xe611;</dt>
+						<dd>
+							<p>个人资料</p><span class="iconfont">&#xe77b;</span></dd>
+					</a>
+				</li>
+				<li>
+					<a href="personalCenter/changePassword.html"><dt class="iconfont col_bg2">&#xe61c;</dt>
+						<dd>
+							<p>修改密码</p><span class="iconfont">&#xe77b;</span></dd>
+					</a>
+				</li>
+				<li>
+					<a href="#" id="logout"><dt class="iconfont col_bg3">&#xe650;</dt>
+						<dd>
+							<p>退出账户</p></dd>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!--底部导航-->
+		<div class="footer_menu">
+			<ul>
+				<li>
+					<a href="office.html" class="mo"><dt><p class="iconfont">&#xe689;</p></dt>
+						<dd>协同办公</dd>
+					</a>
+				</li>
+				<li>
+					<a href="#"><dt><p class="iconfont">&#xe602;</p></dt>
+						<dd>应用平台</dd>
+					</a>
+				</li>
+				<li>
+					<a href="#"><dt><p class="iconfont">&#xe603;</p></dt>
+						<dd>个人中心</dd>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script src="js/app.js"></script>
+		<script>
+			mui('#UserName').innerHTML = app.getState().CompanyName + ' ' + app.getState().UserName;
+			mui('#logout').on('tap', function() {
+				mui.confirm('是否确认退出', '退出登录', ['确认', '取消'], function(e) {
+					if(e.index == 0) {
+						app.setState();
+						alert('退出成功');
+						location.href = 'login.html';
+					}
+				})
+			});
+		</script>
+	</body>
+
+</html>
